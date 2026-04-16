@@ -4,13 +4,13 @@ import { navigate } from "../../../utils/navigate";
 
 const form = document.getElementById("form") as HTMLFormElement;
 const inputEmail = document.getElementById("email") as HTMLInputElement;
-//const inputPassword = document.getElementById("password") as HTMLInputElement;
+const inputPassword = document.getElementById("password") as HTMLInputElement;
 const selectRol = document.getElementById("rol") as HTMLSelectElement;
 
 form.addEventListener("submit", (e: SubmitEvent) => {
   e.preventDefault();
   const valueEmail = inputEmail.value;
-  //const valuePassword = inputPassword.value;
+  const valuePassword = inputPassword.value;
   const valueRol = selectRol.value as Rol;
 
   if (valueRol === "admin") {
@@ -23,6 +23,7 @@ form.addEventListener("submit", (e: SubmitEvent) => {
     email: valueEmail,
     role: valueRol,
     loggedIn: true,
+    password: valuePassword
   };
 
   const parseUser = JSON.stringify(user);
