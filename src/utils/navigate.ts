@@ -1,3 +1,4 @@
 export const navigate = (route: string) => {
-  window.location.href = route;
+	if (window.location.pathname === route) return;
+	window.location.href = route;
 };

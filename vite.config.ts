@@ -1,11 +1,14 @@
 import { defineConfig } from "vite";
-import { resolve } from "path";
+import { fileURLToPath } from "url";
+import { dirname, resolve } from "path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        //d:aplicaion/dist/
         index: resolve(__dirname, "index.html"),
         login: resolve(__dirname, "src/pages/auth/login/login.html"),
         registro: resolve(__dirname, "src/pages/auth/registro/registro.html"),
@@ -14,5 +17,5 @@ export default defineConfig({
       },
     },
   },
-  base: "./",
+  base: "/",
 });

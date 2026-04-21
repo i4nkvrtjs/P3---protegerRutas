@@ -1,16 +1,15 @@
 {
   "name": "proteger_rutas",
-  "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
+  "dependencies": {
+    "vite": "^4.5.14"
+  },
   "devDependencies": {
-    "@types/node": "^24.7.1",
-    "typescript": "~5.8.3",
-    "vite": "^7.1.2"
+    "@types/node": "^25.6.0"
   }
 }

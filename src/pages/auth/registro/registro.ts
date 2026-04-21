@@ -1,4 +1,5 @@
 import type { IUser } from "../../../types/IUser";
+import { navigate } from "../../../utils/navigate";
 
 const form = document.getElementById("registro-form") as HTMLFormElement;
 
@@ -49,4 +50,6 @@ form.addEventListener("submit", (e) => {
 	localStorage.setItem("users", JSON.stringify(users));
 
 	alert("Usuario registrado");
+
+	navigate("/src/pages/auth/login/login.html");
 });
